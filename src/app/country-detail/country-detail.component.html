@@ -1,0 +1,10 @@
+<h2>{{ country.name }}</h2>
+<p>Id: {{ country.id }}</p>
+<p>Europe Union: {{ country.belongsToEuropeanUnion }}</p>
+<p><img src="{{country.flag}}" class="country-flag"/></p>
+
+<mat-list>
+    <mat-list-item *ngFor="let city of cities">
+      {{ city.name }}
+    </mat-list-item>
+  </mat-list>

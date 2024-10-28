@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-list-item {
+    cursor: pointer;
+  }
+  mat-list-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center; /* Center the buttons and carousel vertically */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .carousel {
+    overflow: hidden; /* Hide items that are not currently visible */
+    width: 80%; /* Adjust as necessary */
+    position: relative; /* Position relative for inner carousel */
+  }
+  
+  .carousel-inner {
+    display: flex; /* Use flexbox for horizontal alignment */
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  
+  .carousel-item {
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .country-flag {
+    width: 30px; height: 20px; margin-right: 10px;
+  }
+  
+  .nav-button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px;
+    cursor: pointer; 
+  }
+  
+  .nav-button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+  }

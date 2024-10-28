@@ -1,0 +1,24 @@
+<h2>Countries</h2>
+
+<div class="carousel-container">
+    <button class="nav-button" (click)="prev()" [disabled]="currentIndex === 0">Previous</button>
+
+    <div class="carousel">
+        <div class="carousel-inner" [style.transform]="getTranslateValue()">
+            <div *ngFor="let country of countries" class="carousel-item" (click)="viewDetails(country.id)">
+                <img src="{{country.flag}}" alt="{{ country.name }}" class="country-flag"/>
+                <h3>{{ country.name }}</h3>
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-button" (click)="next()"
+        [disabled]="currentIndex >= countries.length - visibleItems">Next</button>
+</div>
+
+<!-- 
+<mat-list>
+    <mat-list-item *ngFor="let country of countries" (click)="viewDetails(country.id)">
+      <img src="{{ country.flag }}" style="width: 30px; height: 20px; margin-right: 10px;"/> {{ country.name }}
+    </mat-list-item>
+  </mat-list> -->
